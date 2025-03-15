@@ -23,7 +23,6 @@ class LoginView(FormView):
             form.add_error(None, 'Invalid user class')
             return self.form_invalid(form)
     
-
 class LogoutView(LoginRequiredMixin, View):
     def get(self, request):
         logout(request)
